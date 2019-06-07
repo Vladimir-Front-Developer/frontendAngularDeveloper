@@ -1,0 +1,16 @@
+.contents{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    background-color: #1a355b;
+    background-image: url(/assets/images/aboutMe1920x1276.jpg);
+    background-size: cover;
+    .leftColumn{
+        width: 50vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

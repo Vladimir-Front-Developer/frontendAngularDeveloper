@@ -1,0 +1,40 @@
+.mobile {
+    display: none;
+}
+mat-grid-list{
+    background-color: #1a355bb3;
+    width: 100vw;
+    height: 75px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    color: #fff;
+    button{
+        font-size: 15px;
+        font-family: Comfortaa Regular;
+    }
+    .linkHome {
+        color: goldenrod;
+        font-size: 20px;
+        font-family: 'Gunny Rewritten';
+        img{
+            margin-right: 10px;
+        }
+    }
+    .linkGitHub {
+        color: goldenrod;
+        font-size: 20px;
+        font-family: 'Gunny Rewritten';
+        img{
+            margin-right: 10px;
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}

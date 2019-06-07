@@ -1,0 +1,42 @@
+<mat-grid-list  cols="8" rowHeight="75" class="desktop">
+  <mat-grid-tile colspan=2>
+      <button mat-button class="linkHome">
+        <img src="/assets/icons/logo.png" alt="logo">Angular FrontEnd Developer
+      </button>
+  </mat-grid-tile>
+
+  <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols">
+      <button mat-button
+        (click)="assignDataContents(tile)">
+        {{tile.text}}</button>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan=2>
+    <button mat-button class="linkGitHub">
+      <img src="/assets/icons/github.svg" alt="linkProject">GitHub
+    </button>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list  cols="3" rowHeight="75" class="mobile">
+    <mat-grid-tile colspan=1>
+      <button mat-button class="linkHome">
+        <img src="/assets/icons/logo.png" alt="logo">AFD
+      </button>
+    </mat-grid-tile>
+  <mat-grid-tile colspan=1>
+      <button mat-button [matMenuTriggerFor]="menu">
+          <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item
+        *ngFor="let tile of tiles">
+        {{tile.text}}</button>
+      </mat-menu>
+  </mat-grid-tile>
+  <mat-grid-tile colspan=1>
+    <button mat-button class="linkGitHub">
+      <img src="/assets/icons/github.svg" alt="linkProject">GitHub
+    </button>
+  </mat-grid-tile>
+</mat-grid-list>

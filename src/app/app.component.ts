@@ -5,6 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  title = 'frontendAngularDeveloper';
+  itemValue: object = { id: 0, title: 'Добро пожаловать!' }
+  public onClicked(itemValue){
+    this.itemValue = itemValue
+  }
 }

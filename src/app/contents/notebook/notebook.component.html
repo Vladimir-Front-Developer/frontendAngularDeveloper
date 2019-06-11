@@ -1,24 +1,15 @@
 <div class="notebook">
-  <div class="cover"
-  (click)="nextPage()">
-      <p>{{nameNotebook}}</p>
-  </div>
-    <div class="page"
-    *ngFor="let page of pageData; let i = index"
-    (click)="nextPage()"
-    [ngClass]="{'pageActive': currentPage === page.id}"
-    > 
-    <h1>{{page.headline}}</h1>
-    <b>{{page.subtitle}}</b>
-    <p>{{page.percent}}</p>
-    <p>{{page.text}}</p>
-    <strong>{{i}}</strong>
-  </div>
-
+    <ng-container *ngFor="let page of pageData">
+        <div class="page"
+          (click)="nextPage()"
+          [ngClass]="{pageActive: currentPage > page.id}">
+          <div class="pageContent" *ngIf="currentPage === page.id">
+              <h1>{{page.headline}}</h1>
+              <p><b>{{page.subtitle}}</b></p>
+              <p>{{page.percent}}</p>
+              <p>{{page.text}}</p>
+              <strong>{{page.id}}</strong>  
+          </div>
+        </div> 
+    </ng-container>
 </div>
-<!-- <a href="#" (click)="toggle = !toggle">Show
-    <span>
-     <label class="m-0">this</label>
-     <span [ngStyle]="{'transform': toggle ? 'rotate(180deg)':''}" class="fa fa-arrow-right"></span>
-    </span>
- </a> -->

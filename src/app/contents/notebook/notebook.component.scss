@@ -1,23 +1,8 @@
 .notebook{
     perspective: 1000px;
     transform-style: preserve-3d;
-    .cover{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        position: absolute;
-        transform-origin: left center;
-        border-style: solid;
-        border-width: 1px 1px 1px 3px;
-        border-color: black;
-        background-color: white;
-        margin-top: -300px;
-        width: 400px;
-        height: 600px
-    }
     .page{
-        display: none;
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
@@ -32,8 +17,8 @@
         height: 600px;
     }
     .pageActive{
-        display: flex;
         transition: transform 1s;
         transform: rotateY(-140deg);
     }
 }
+  
